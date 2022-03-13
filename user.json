@@ -1,0 +1,8 @@
+{
+  "cookie": " ",
+  "姓名": " ",
+  "班级": " ",
+  "学号": " ",
+  "url": "http://121.4.142.110/api/contest_submissions?myself=1&result=&username=&page=1&contest_id=57&limit=100&offset=",
+  "url1": "http://121.4.142.110/api/submission?id="
+}
