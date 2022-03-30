@@ -45,7 +45,7 @@ def lsDir():
     ls = os.listdir('模板')
     for i in ls:
         ans[i] = list(map(lambda x: int(x[-9:-5]),
-                          filter(lambda x: not x[0] == '实', os.listdir('模板/'+i))))
+                          filter(lambda x: not x[0] == '实' and not x[0] == '作', os.listdir('模板/'+i))))
     return ans
 
 
@@ -53,7 +53,7 @@ def change(url, problem, code):
     '''修改word'''
     with open('user.json', 'r', encoding='utf-8') as f:
         userData = json.loads(f.read())
-    #'AC-学号-姓名- 题号'
+    # 'AC-学号-姓名- 题号'
     document = Document('模板/{}/AC-学号-姓名- 题号{}.docx'.format(url, problem))
     table = document.tables[0]
     # 修改表格
